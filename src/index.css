@@ -1,8 +1,51 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+
+:root {
+  --pr-color: theme(--color-gray-950);
+  --sc-color: theme(--color-gray-100);
+  --ac-color: theme(--color-red-700);
+  --font-size: 16px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: var(--pr-color);
+  font-size: var(--font-size);
+  color: var(--sc-color);
+}
+
+.container {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0 auto
+}
+
+/* my custom styles */
+.my-ac-btn {
+  background: var(--ac-color);
+  color: var(--sc-color);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  transition: 0.1s;
+}
+.my-ac-btn:active,
+.my-ac-btn:hover {
+  box-shadow: 0 0 0.5rem var(--ac-color);
+}
+
+.my-border-b {
+  border-bottom: 2px solid var(--sc-color);
 }
