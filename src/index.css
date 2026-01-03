@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 
 :root {
   --pr-color: theme(--color-gray-950);
   --sc-color: theme(--color-gray-100);
   --ac-color: theme(--color-red-700);
+  --border-color: color-mix(in srgb, var(--sc-color) 50%, transparent);
   --font-size: 16px;
 }
 
@@ -29,7 +29,7 @@ button {
 
 .container {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   margin: 0 auto
 }
 
@@ -43,9 +43,21 @@ button {
 }
 .my-ac-btn:active,
 .my-ac-btn:hover {
-  box-shadow: 0 0 0.5rem var(--ac-color);
+  box-shadow: 0 0 0.5rem var(--border-color);
 }
 
+.my-border {
+  border-top: 2px solid var(--border-color);
+}
+.my-border-t {
+  border-top: 2px solid var(--border-color);
+}
 .my-border-b {
-  border-bottom: 2px solid var(--sc-color);
+  border-bottom: 2px solid var(--border-color);
+}
+.my-border-l {
+  border-left: 2px solid var(--border-color);
+}
+.my-border-r {
+  border-right: 2px solid var(--border-color);
 }
