@@ -1,4 +1,4 @@
-function TopBar() {
+export default function TopBar() {
   return (
     <div id="TopBar" className="my-border-b py-2">
       <div className="container flex gap-4 align-middle">
@@ -8,5 +8,3 @@ function TopBar() {
     </div>
   );
 }
-
-export default TopBar;
