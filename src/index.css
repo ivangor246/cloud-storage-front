@@ -3,13 +3,14 @@
 :root {
   --pr-color: theme(--color-gray-950);
   --sc-color: theme(--color-gray-100);
-  --ac-color: theme(--color-red-700);
+  --ac-color: theme(--color-amber-400);
   --border-color: color-mix(in srgb, var(--sc-color) 50%, transparent);
   --font-size: 16px;
 }
 
 html,
-body {
+body,
+#root {
   width: 100%;
   height: 100%;
 }
@@ -36,14 +37,14 @@ button {
 /* my custom styles */
 .my-ac-btn {
   background: var(--ac-color);
-  color: var(--sc-color);
+  color: var(--pr-color);
   padding: 0.25rem;
   border-radius: 0.5rem;
   transition: 0.1s;
 }
 .my-ac-btn:active,
 .my-ac-btn:hover {
-  box-shadow: 0 0 0.5rem var(--border-color);
+  box-shadow: 0 0 0.5rem var(--ac-color);
 }
 
 .my-border {

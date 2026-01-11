@@ -1,8 +1,9 @@
-function FolderList() {
+function RootFolderList() {
   const folders: Record<string, string> = generateFolders(30);
 
   return (
-    <div id="FolderList" className="max-w-1/4 w-full my-border-r">
+    <div id="FolderList" className="w-1/3 my-border-r">
+      <h2 className="text-lg">Корневые папки</h2>
       <ol className="py-4">
         {Object.entries(folders).map(([id, name], idx) => (
           <li key={id} className="flex items-start gap-1">
@@ -17,7 +18,7 @@ function FolderList() {
   );
 }
 
-export default FolderList;
+export default RootFolderList;
 
 const generateFolders = (count: number) => {
   const folders: Record<string, string> = {};
